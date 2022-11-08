@@ -14,8 +14,9 @@ router.post("/", async function (req, res, next) {
         link: "undefined",
       });
     } else {
-      let data = req.files.undefined; // 声明字段名为 data 的图片数据为 data 变量
+      let data = req.files.file; // 声明字段名为 data 的图片数据为 data 变量
       let md5 = crypto.createHash("md5").update(data.name).digest("hex"); // 取 data 文件名的 MD5 值
+      console.log(filePath);
       data.mv(`.${filePath}/` + md5 + path.extname(data.name)); // 存储(移动)图片到 uploads 文件夹，文件名为 data 文件名 MD5 + 文件拓展名
       // 发送以下 JSON 数据
       res.send({
@@ -25,7 +26,7 @@ router.post("/", async function (req, res, next) {
     }
   } catch (err) {
     // 如果上传出现错误，则返回 HTTP 500.
-    res.status(500).send(err);
+    res.sendStatus(500).send(err);
   }
   // res.send("respond with a resource");
 });

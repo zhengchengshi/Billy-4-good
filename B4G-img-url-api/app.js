@@ -18,19 +18,19 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "jade");
 
 // 跨域处理
-app.all("*", function (req, res, next) {
-  //设置允许跨域的域名，*代表允许人员域名跨域
-  res.header("Access-Control-Allow-Origin", "bytedance.cool");
-  //允许的header类型
-  res.header("Access-Control-Allow-Headers", "*");
-  //允许的header类型
-  res.header("Access-Control-Allow-Methods", "DELETE,PUT,POST,GET,OPTIONS");
+// app.all("*", function (req, res, next) {
+//   //设置允许跨域的域名，*代表允许人员域名跨域
+//   res.header("Access-Control-Allow-Origin", "*");
+//   //允许的header类型
+//   res.header("Access-Control-Allow-Headers", "*");
+//   //允许的header类型
+//   res.header("Access-Control-Allow-Methods", "DELETE,PUT,POST,GET,OPTIONS");
 
-  res.header("Access-Control-Allow-Methods", "*");
-  if (req.method.toLowerCase() == "options")
-    res.send(200); //让options尝试请求快速结束
-  else next();
-});
+//   res.header("Access-Control-Allow-Methods", "*");
+//   if (req.method.toLowerCase() == "options")
+//     res.send(200); //让options尝试请求快速结束
+//   else next();
+// });
 
 app.use(cors());
 app.use(logger("dev"));
