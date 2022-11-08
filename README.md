@@ -5,7 +5,7 @@ I made up my mind to do something that could help others after participating in 
 📋 **todo list**
 - [x] daily-English-client 
 - [ ] B4G-fetch
-- [ ] B4G-image-url
+- [x] B4G-image-url
 - [ ] B4G-music-player
 - [ ] B4G-washing-machine
 - [ ] B4G-tf-game
