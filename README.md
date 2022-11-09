@@ -4,6 +4,7 @@ I made up my mind to do something that could help others after participating in 
 
 📋 **todo list**
 - [x] daily-English-client 
+- [x] B4G-email-notice
 - [ ] B4G-fetch
 - [x] B4G-image-url
 - [ ] B4G-music-player
