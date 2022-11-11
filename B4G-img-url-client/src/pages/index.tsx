@@ -114,7 +114,7 @@ const genDragger: React.FC = () => {
         <span className={styles.picUrl} onClick={() => copy(item)} key={item}>
           {item}
           <img
-            src="https://file.bytedance.cool/test/0cf661515907b968ddc73db18e05391d.png"
+            src="https://file.bytedance.cool/img/06ea36857b80d7a82f6f2711ffc32f1a.png"
             className={styles.copyIcon}
           />
         </span>

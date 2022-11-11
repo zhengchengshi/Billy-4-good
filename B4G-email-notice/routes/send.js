@@ -9,7 +9,7 @@ const {
   emailType,
   emailText,
   emailSubject,
-} = require("../info.js");
+} = require("../entry.js");
 
 let transporter = nodemailer.createTransport({
   service: emailType,
