@@ -22,7 +22,7 @@ let transporter = nodemailer.createTransport({
 });
 
 router.post("/", async function (req, res, next) {
-  const target = req.body.to;
+  const target = req.body.to || emailTarget;
   sendMail(target);
 
   function sendMail(mail) {
@@ -53,8 +53,6 @@ router.post("/", async function (req, res, next) {
       }
     });
   }
-  // sendMail("2650744390@qq.com", 200, res.send);
-  //   res.send("respond with a resource");
 });
 
 module.exports = router;
