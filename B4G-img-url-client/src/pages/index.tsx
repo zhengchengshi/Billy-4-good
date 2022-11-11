@@ -3,6 +3,8 @@ import type { RcFile, UploadFile, UploadProps } from 'antd/es/upload/interface';
 import { message, Upload, Button, Input } from 'antd';
 import React, { ChangeEvent, Fragment, useState } from 'react';
 import styles from './index.less';
+// @ts-ignore
+import host from './entry.ts';
 const { Dragger } = Upload;
 
 const genDragger: React.FC = () => {
@@ -11,9 +13,7 @@ const genDragger: React.FC = () => {
   const [path, setPath] = useState<string>('');
   const [picsArr, setPicsArr] = useState<string[]>([]);
   const baseUrl =
-    process.env.NODE_ENV === 'production'
-      ? 'https://file.bytedance.cool/api'
-      : 'http://localhost:3000';
+    process.env.NODE_ENV === 'production' ? host : 'http://localhost:3000';
   const uploadInfo: UploadProps = {
     onRemove: (file) => {
       const index = fileList.indexOf(file);

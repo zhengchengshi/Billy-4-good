@@ -8,7 +8,6 @@ const fileUpload = require("express-fileupload");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const indexRouter = require("./routes/index");
-const usersRouter = require("./routes/users");
 const uploadRouter = require("./routes/upload");
 
 const app = express();
@@ -47,7 +46,6 @@ app.use(
 );
 
 app.use("/", indexRouter);
-app.use("/users", usersRouter);
 app.use("/upload", uploadRouter);
 
 // catch 404 and forward to error handler
